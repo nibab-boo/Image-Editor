@@ -9,5 +9,36 @@
 
 <!-- body -->
 {% block body %}
-  <h2>This is index with autoreload.</h2>
+  <div class="container">    
+    <h2>This is index with autoreload.</h2>
+    <div class="w-25 mx-auto">
+      <div class="input-group">
+        <input type="file" accept="image/*" class="form-control" id="image-file" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+      </div>
+    </div>
+    <div class="mx-auto my-3 w-50">
+      <img width="100" id="img-preview">
+    </div>
+  </div>
+  <script>
+    const img = document.getElementById("img-preview");
+    // on changing Input
+    const onChange = (e) => {
+      const reader = new FileReader();
+      const file = e.currentTarget.files[0];
+
+      reader.onload = () => {
+        img.src = reader.result;
+      }
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+    // add Event Listener for input on Change 
+    const file = document.getElementById("image-file");
+    file.addEventListener("change", onChange)
+  
+  
+  </script>
 {% endblock %}
