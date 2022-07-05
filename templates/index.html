@@ -9,17 +9,33 @@
 
 <!-- body -->
 {% block body %}
-  <div class="container p-5">    
-    <h2>This is index with autoreload.</h2>
+  <div class="container p-5">
+    <div class="intro text-center">
+      <h2>Image Editor</h2>
+      <p>
+        <strong class="my-2 d-block">
+          "EDITING YOUR IMAGE WAS NEVER EASY."
+        </strong>
+        <br>
+        Edit your pictures and images with a click of a button and download them to your lock.
+        <br>  
+        <em class="my-5 d-block">
+          NOTE: BE RESPONSIBLE. Delete your Image if you don't want it. Or else, I will sell them.
+        </em>
+
+      </p>
+    </div>
     <form method="post" action="/image" enctype="multipart/form-data">
-      <div class="w-75">
+      <div class="w-75 mx-auto">
         <div class="input-group">
           <input type="file" accept="image/*" name="photo" class="form-control" id="image-file" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
         </div>
       </div>
-      <div class="my-3 mx-auto">
-        <div class="d-flex">
-          <input type="submit" name="blur" value="grayScale">
+      <div class="my-5 mx-auto">
+        <div class="d-flex mb-3 flex-wrap justify-content-center">
+          <input type="submit" class="m-2" name="blur" value="grayScale">
+          <input type="submit" class="m-2" name="blur" value="blur">
+          <input type="submit" class="m-2" name="blur" value="edge">
         </div>
       </div>
       <div class="mx-auto my-3 w-50">

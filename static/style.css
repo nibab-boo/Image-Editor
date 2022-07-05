@@ -1,5 +1,32 @@
+.main-box {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #1A374D;
+  color: #406882;
+}
+
+h1, h2, h3 {
+  color: #6998AB;
+}
+
+h4, h5 {
+  color: #B1D0E0;
+}
+
+
 #img-preview {
   width: 100%;
   object-fit: cover;
   border-radius: 8px;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  padding: 12px 6px;
+  width: 120px;
+  font-weight: 700;
+  border-radius: 22px;
+  color: #1A374D;
+  border: 0px;
+  background: #B1D0E0;
 }
