@@ -1,4 +1,3 @@
-from pkg_resources import EGG_DIST
 from flask import Flask, render_template, request, redirect, url_for,after_this_request, send_file
 from PIL import Image, ImageFilter
 from werkzeug.utils import secure_filename
